@@ -2,7 +2,8 @@
   "name": "tissue_backend",
   "version": "1.0.0",
   "engines": {
-    "node": "13.1.0"
+    "node": "13.1.0",
+    "npm": "6.13.0"
   },
   "description": "CRUD app Node.JS Course",
   "main": "server.js",
