@@ -26,7 +26,7 @@ MongoClient.connect('mongodb+srv://starboardali:aurora4603@cluster0-l3i3e.mongod
     if (err) return console.log(err)
     db = database.db('issues')
     app.listen(process.env.PORT || 3000, () => {
-        console.log('Listening on port: ' + $PORT + '.')
+        console.log('Listening on port')
     })
 })
 
