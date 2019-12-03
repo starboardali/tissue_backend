@@ -6,7 +6,7 @@
     "npm": "6.13.0"
   },
   "description": "CRUD app Node.JS Course",
-  "main": "server.js",
+  "main": "index.ejs",
   "scripts": {
     "test": "test"
   },
