@@ -20,8 +20,7 @@ app.set(bodyParser.json());
 
 
 let db
-MongoClient.connect('mongodb://heroku_6056z36q:3msl1gdloscj67dpfa29tcpgk3@ds251618.mlab.com:51618/heroku_6056z36q', {
-    useUnifiedTopology: true
+MongoClient.connect('mongodb://starboardaliMDB:aurora4603@ds251618.mlab.com:51618/heroku_6056z36q', {    useUnifiedTopology: true
 }, (err, database) => {
     if (err) return console.log(err)
     db = database.db('issues')
