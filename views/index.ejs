@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tissue Issues</title>
+</head>
+<body>
+    <h2>Tissue Issues</h2>
+
+    <h3>Add New Issue</h3>
+    <form action="/issues" method="POST">
+        <input type="text" name="title" placeholder="Title"><br>
+        <select name="status" size 3="3">
+            <option value="new">New</option>
+            <option value="resolved">Resolved</option>
+            <option value="closed">Closed</option>
+        </select><br>
+        <input type="text" name="assignee" placeholder="Assignee"><br>
+        <input type="text" name="created" placeholder="Created"><br>
+        <input type="text" name="updated" placeholder="Updated"><br>
+        <input type="text" name="details" placeholder="Details"><br>
+        <button type="submit" id="submit"> Submit Issue</button>
+    </form>
+
+    <h3>Update Resolved Issue</h3>
+    <button id="update"> Close Issue</button>
+
+    <h3>Delete Last Closed Issue</h3>
+    <button id="delete"> Delete</button>
+     
+    <h3>List of Issues:</h3>
+    <ul class="issues">
+            <% for (var i = 0; i < issues.length; i++) { %>
+                <li class="issue">
+                ID:<span><%= issues[i]._id %></span><br>
+                Title:<span><%= issues[i].title %></span><br>
+                Status: <span><%= issues[i].status %></span><br>
+                Assignee: <span><%= issues[i].assignee %></span><br>
+                Created:<span><%= issues[i].created %></span><br>
+                Updated:<span><%= issues[i].updated %></span><br>
+                Details:<span><%= issues[i].details %></span>
+                </li><p>
+            <% } %>
+            </ul>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
